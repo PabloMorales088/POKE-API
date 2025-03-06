@@ -4,7 +4,7 @@ footer {
     color: #3B4CCA; /* Azul eléctrico */
     padding: 20px 30px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sombra superior */
-    border-top: 3px solid #FFEB3B; /* Borde superior azul eléctrico */
+    border-top: 6px solid #FFEB3B; /* Borde superior azul eléctrico */
     text-align: center;
 }
 
@@ -32,16 +32,23 @@ footer {
 }
 
 /* Texto del footer */
+/* Estilos para los párrafos del footer */
 .footer-column p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin: 5px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra más intensa para mejor contraste */
+    opacity: 0.9; /* Ligera opacidad para suavizar el texto */
+    letter-spacing: 0.5px; /* Mejora la legibilidad */
 }
+
 
 /* Estilos de los enlaces */
 .footer-column ul {
     list-style: none;
     padding: 0;
+    letter-spacing: 1px; /* Mejora la legibilidad */
+
 }
 
 .footer-column ul li {
@@ -49,20 +56,24 @@ footer {
 }
 
 .footer-column a {
+    letter-spacing: 0.5px; /* Mejora la legibilidad */
+
     text-decoration: none;
     color: #3B4CCA; /* Azul eléctrico */
+    font-size: 1.2rem;
+
     font-weight: bold;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .footer-column a:hover {
-    color: #FFCB05; /* Amarillo brillante */
+    color: rgb(167, 38, 38); /* Amarillo brillante */
     text-shadow: 0 0 10px rgba(255, 203, 5, 0.8); /* Resplandor amarillo */
 }
 
 /* Estilos de la parte inferior del footer */
 .footer-bottom {
-    margin-top: 60px;
+    margin-top: 80px;
     font-size: 1rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);

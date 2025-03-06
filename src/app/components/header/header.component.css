@@ -9,7 +9,7 @@ header {
     position: sticky;
     top: 0; /* Pegado al borde superior */
     z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-    border-bottom: 3px solid #FFEB3B; /* Borde inferior azul eléctrico */
+    border-bottom: 6px solid #FFEB3B; /* Borde inferior azul eléctrico */
 
   }
   
