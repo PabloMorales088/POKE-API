@@ -1,0 +1,9 @@
+/* Estilos generales del body */
+body {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    min-height: 100vh; /* Ocupa al menos el 100% del alto de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    background-color: blue;
+  }

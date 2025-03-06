@@ -1,0 +1,102 @@
+/* Estilos del contenedor de la cuadrícula */
+.grid-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Aumento el tamaño mínimo a 250px */
+    gap: 30px; /* Aumento el espacio entre las celdas */
+    padding: 40px;
+    justify-items: center;
+    background-color: #3B4CCA; /* Fondo suave para resaltar las celdas */
+}
+
+/* Estilos de cada Pokémon en la cuadrícula */
+.grid-item {
+    background: linear-gradient(45deg, #FFEB3B, #FF5722); /* Fondo degradado más atractivo */
+    border: 5px solid #FFEB3B; /* Borde de 5px, color amarillo brillante */
+    border-radius: 15px; /* Bordes más redondeados para un efecto más suave */
+    padding: 25px; /* Aumento del padding */
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más sutil y difusa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrego transición de sombra */
+    cursor: pointer;
+    overflow: hidden; /* Evita que las imágenes o texto sobresalgan del borde redondeado */
+}
+
+.grid-item:hover {
+    transform: scale(1.1); /* Escala un poco más la celda al pasar el cursor */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Efecto de sombra más fuerte al pasar el cursor */
+}
+
+.grid-item img {
+    width: 180px; /* Aumento el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Redondeo las esquinas de las imágenes */
+    margin-bottom: 15px; /* Agrego espacio entre la imagen y el nombre */
+}
+
+/* Estilo para los nombres de los Pokémon */
+.grid-item p {
+    font-size: 1.1rem; /* Aumento el tamaño de la fuente */
+    font-weight: bold;
+    color: #fff; /* Color blanco para el texto */
+    margin-top: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px; /* Añadir espacio entre letras */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil al texto */
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y menos opaco */
+    z-index: 1000;
+    padding: 10px;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FF5722; /* Color de cierre acorde al tema */
+}
+
+.close:hover {
+    color: #d32f2f; /* Cambio de color cuando se pasa el ratón */
+}
+
+/* Transición de animación para el modal */
+.modal-content {
+    animation: modal-enter 0.3s ease-out;
+}
+
+@keyframes modal-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

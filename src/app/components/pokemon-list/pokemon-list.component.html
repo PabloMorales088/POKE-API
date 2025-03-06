@@ -1,0 +1,17 @@
+<main>
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let pokemon of pokemonList" (click)="showPokemonDetails(pokemon)">
+      <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+      <p>{{ pokemon.name | titlecase }}</p>
+    </div>
+  </div>
+
+
+  <!-- Modal de detalles del Pokémon -->
+  <div class="modal" *ngIf="selectedPokemon">
+    <div class="modal-content">
+      <span class="close" (click)="closePokemonDetails()">&times;</span>
+      <app-pokemon-detail *ngIf="selectedPokemon" [pokemon]="selectedPokemon"></app-pokemon-detail>
+    </div>
+  </div>
+</main>

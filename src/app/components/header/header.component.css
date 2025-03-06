@@ -1,0 +1,85 @@
+/* Estilos generales */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #FF0000, #FFCB05); /* Gradiente rojo y amarillo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    position: sticky;
+    top: 0; /* Pegado al borde superior */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    border-bottom: 3px solid #FFEB3B; /* Borde inferior azul eléctrico */
+
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
+    transition: transform 0.3s ease-in-out; /* Animación suave al hacer hover */
+  }
+  
+  .logo:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  }
+  
+  .logo img {
+    width: 60px; /* Aumenta el tamaño del logo */
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Sombra blanca al logo */
+  }
+  
+  .logo h1 {
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #3B4CCA; /* Texto azul eléctrico */
+    margin: 0; /* Eliminar margen por defecto del h1 */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Sombra blanca al texto */
+  }
+  
+  /* Navegación */
+  nav ul {
+    display: flex;
+    gap: 25px; /* Más espacio entre elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #3B4CCA; /* Texto azul eléctrico */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 12px; /* Añade padding para mejor interacción */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease-in-out; /* Transición suave para todos los efectos */
+    position: relative; /* Para el efecto de subrayado */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FFCB05; /* Subrayado amarillo brillante */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Animación del subrayado */
+  }
+  
+  nav a:hover {
+    color: rgb(167, 38, 38); /* Cambiar color al amarillo brillante al pasar el mouse */
+    background-color: rgba(255, 203, 5, 0.1); /* Fondo amarillo semi-transparente */
+    text-shadow: 0 0 10px rgba(255, 203, 5, 0.8); /* Efecto de sombra al pasar el mouse */
+  }
+  
+  nav a:hover::after {
+    width: 100%; /* Subrayado completo al pasar el mouse */
+  }
